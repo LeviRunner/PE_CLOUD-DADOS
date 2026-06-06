@@ -50,10 +50,10 @@ main { max-width: 1280px; margin: 0 auto; padding: 24px 18px 64px; }
 .course-card { padding: 16px; display:flex; flex-direction:column; justify-content:space-between; min-height: 100%; }
 .course-card .meta { color: var(--muted); font-size: 13px; margin: 6px 0; }
 .course-card .tag { display:inline-block; padding: 6px 8px; border-radius: 999px; background: rgba(167,139,250,0.12); color: #ddd6fe; font-size: 12px; }
-
-.task-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 10px; }
-.task-item { display:flex; flex-direction:column; gap:8px; align-items:flex-start; border:1px solid rgba(148,163,184,0.14); border-radius: 18px; padding: 12px; background: linear-gradient(180deg, rgba(15,23,42,0.96), rgba(10,18,30,0.96)); box-shadow: 0 14px 28px rgba(7,11,19,0.28); }
-.task-item strong { font-size: 15px; }
+.task-card { gap: 10px; }
+.task-card .task-label { display:flex; align-items:flex-start; gap:10px; }
+.task-card .task-label input { margin-top: 2px; }
+.task-card .task-meta { display:grid; gap: 4px; }
 .task-item input { width: 18px; height: 18px; accent-color: var(--accent); }
 .task-item .task-link { display:flex; align-items:center; justify-content:space-between; width:100%; gap:8px; margin-top: 4px; }
 .task-pill { font-size:12px; color: var(--muted); }
