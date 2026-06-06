@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil | Study Tracker</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-badge"></span> Study Tracker</a>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="courses.html">Cursos</a>
+        <a href="profile.html" class="active">Perfil</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰ Menu</button>
+    </header>
+    <aside class="mobile-nav" id="mobileNav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Cursos</a>
+      <a href="profile.html">Perfil</a>
+      <a href="../index.html">Início</a>
+    </aside>
+    <main>
+      <section class="hero-card">
+        <div>
+          <div class="badge">Perfil</div>
+          <h1>Selecione seu foco atual</h1>
+          <p class="lead">Escolha qual trilha está estudando agora para a dashboard mostrar somente as tarefas desse curso.</p>
+        </div>
+        <div class="panel">
+          <h3>Curso ativo</h3>
+          <div class="profile-box">
+            <label for="courseSelect">Trilha principal</label>
+            <select id="courseSelect" class="select"></select>
+            <div id="courseChips" class="chips"></div>
+          </div>
+        </div>
+      </section>
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Objetivo do perfil</h2>
+          <p class="muted">O painel de dashboard filtra automaticamente o conteúdo de acordo com o curso selecionado, mantendo o foco em estudos, cursos e certificações.</p>
+        </article>
+        <article class="panel">
+          <h2>Próximos passos</h2>
+          <p class="muted">Adicione novos cursos, habilidades e certificações nas páginas de catálogo e dashboard sem quebrar a estrutura.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

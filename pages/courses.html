@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursos | Study Tracker</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-badge"></span> Study Tracker</a>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="courses.html" class="active">Cursos</a>
+        <a href="profile.html">Perfil</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰ Menu</button>
+    </header>
+    <aside class="mobile-nav" id="mobileNav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Cursos</a>
+      <a href="profile.html">Perfil</a>
+      <a href="../index.html">Início</a>
+    </aside>
+    <main>
+      <section class="hero-card">
+        <div>
+          <div class="badge">Cursos</div>
+          <h1>Catálogo de trilhas</h1>
+          <p class="lead">Estrutura preparada para expandir com novos cursos, habilidades e certificações.</p>
+        </div>
+        <div class="panel">
+          <h3>Como usar</h3>
+          <p class="muted">Cada trilha pode receber novos materiais, links oficiais e metas de certificação.</p>
+        </div>
+      </section>
+      <section class="course-grid">
+        <article class="course-card"><div class="badge">Cloud</div><h3>Cloud Computing</h3><p class="meta">Estudos, cursos e certificações em nuvem.</p><span class="tag">4-6 meses</span></article>
+        <article class="course-card"><div class="badge">Dados</div><h3>Ciência de Dados</h3><p class="meta">Análise, BI, estatística e certificações.</p><span class="tag">6-8 meses</span></article>
+        <article class="course-card"><div class="badge">Infra</div><h3>Infraestrutura</h3><p class="meta">Linux, redes, containers e automação.</p><span class="tag">4-6 meses</span></article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

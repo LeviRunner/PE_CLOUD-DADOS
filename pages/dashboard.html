@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Study Tracker</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span class="brand-badge"></span> Study Tracker</a>
+      <nav class="nav-links">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="courses.html">Cursos</a>
+        <a href="profile.html">Perfil</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰ Menu</button>
+    </header>
+
+    <aside class="mobile-nav" id="mobileNav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">Cursos</a>
+      <a href="profile.html">Perfil</a>
+      <a href="../index.html">Início</a>
+    </aside>
+
+    <main>
+      <section class="hero-card">
+        <div>
+          <div class="badge">Open source • PWA • Offline</div>
+          <h1 id="courseHeading">Dashboard</h1>
+          <p class="lead" id="courseSub">Acompanhe progresso por trilha, curso e certificação.</p>
+        </div>
+        <div class="panel">
+          <h3>Curso ativo</h3>
+          <p class="muted">Selecione o curso no perfil para filtrar a dashboard.</p>
+          <div class="profile-box">
+            <label for="courseSelect">Curso selecionado</label>
+            <select id="courseSelect" class="select"></select>
+            <div id="courseChips" class="chips"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Progresso do curso</h2>
+          <div class="progress-row"><strong id="courseStat">0% completo</strong><span class="muted">filtrado pelo perfil</span></div>
+          <div class="progress-bar"><span style="width:0%"></span></div>
+          <div class="task-list" id="taskList"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Visão geral por trilha</h2>
+          <p class="muted">Compare a evolução de Cloud, Dados e Infraestrutura em um único painel.</p>
+          <div class="course-grid" id="overviewList"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
