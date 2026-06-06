@@ -58,26 +58,10 @@ function renderDashboard() {
 
   const heading = document.getElementById('courseHeading');
   const sub = document.getElementById('courseSub');
-  const stat = document.getElementById('courseStat');
-  const taskList = document.getElementById('taskList');
   const overviewList = document.getElementById('overviewList');
 
   if (heading) heading.textContent = `${currentCourse.name} — Dashboard`;
   if (sub) sub.textContent = `${currentCourse.focus} · ${currentCourse.duration}`;
-  if (stat) stat.textContent = `${currentProgress}% completo`;
-
-  if (taskList) {
-    taskList.innerHTML = currentCourse.tasks.map((task) => `
-      <article class="task-item">
-        <input type="checkbox" ${task.status !== 'Planejado' ? 'checked' : ''}>
-        <div>
-          <strong>${task.title}</strong>
-          <div class="task-pill">${task.status}</div>
-        </div>
-        <span class="tag">${task.status === 'Meta' ? 'Meta' : 'Curso'}</span>
-      </article>
-    `).join('');
-  }
 
   if (overviewList) {
     overviewList.innerHTML = COURSES.map((course) => {
