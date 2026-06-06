@@ -115,7 +115,7 @@ function saveTaskProgress(taskId, completed) {
 
     // Sync with Service Worker cache
     if ('serviceWorker' in navigator && 'caches' in window) {
-        caches.open('progress-cache-v3').then(cache => {
+        caches.open('progress-cache-v4').then(cache => {
             cache.put('/progress.json', new Response(JSON.stringify(progress)));
         });
     }
