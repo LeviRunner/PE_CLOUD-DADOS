@@ -17,6 +17,7 @@ const COURSES = [
 ];
 
 const STORAGE_KEY = 'study-tracker-selected-course';
+const COURSE_PROGRESS_KEY = 'study-tracker-progress';
 
 function initMenu() {
   const btn = document.getElementById('menuBtn');
@@ -78,10 +79,49 @@ function renderDashboard() {
   }
 }
 
+function updateCourseProgress() {
+  const checkboxes = document.querySelectorAll('.task-checkbox');
+  if (!checkboxes.length) return;
+
+  const completed = Array.from(checkboxes).filter((checkbox) => checkbox.checked).length;
+  const total = checkboxes.length;
+  const percentage = total ? Math.round((completed / total) * 100) : 0;
+
+  const label = document.getElementById('courseProgressLabel');
+  const bar = document.getElementById('courseProgressBar');
+
+  if (label) label.textContent = `${completed}/${total} concluídos`;
+  if (bar) bar.style.width = `${percentage}%`;
+}
+
+function loadCourseProgress() {
+  const saved = JSON.parse(localStorage.getItem(COURSE_PROGRESS_KEY) || '{}');
+  document.querySelectorAll('.task-checkbox').forEach((checkbox) => {
+    checkbox.checked = Boolean(saved[checkbox.dataset.id]);
+  });
+  updateCourseProgress();
+}
+
+function saveCourseProgress(event) {
+  const checkbox = event.target;
+  const progress = JSON.parse(localStorage.getItem(COURSE_PROGRESS_KEY) || '{}');
+  progress[checkbox.dataset.id] = checkbox.checked;
+  localStorage.setItem(COURSE_PROGRESS_KEY, JSON.stringify(progress));
+  updateCourseProgress();
+}
+
+function initCourseChecklist() {
+  loadCourseProgress();
+  document.querySelectorAll('.task-checkbox').forEach((checkbox) => {
+    checkbox.addEventListener('change', saveCourseProgress);
+  });
+}
+
 function init() {
   initMenu();
   renderCourseSelector();
   renderDashboard();
+  initCourseChecklist();
 }
 
 window.addEventListener('DOMContentLoaded', init);
