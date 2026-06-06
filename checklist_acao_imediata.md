@@ -8,8 +8,8 @@
 ### Escolha seu caminho
 - [ ] **Leia a comparação das 3 trilhas**
   - Ciência de Dados: Para análise, BI, insights
-  - Cloud Computing: Para plataformas e desenvolvimento em nuvem (⭐ MAIOR SALÁRIO + DEMANDA)
-  - Infraestrutura: Para Linux, redes, containers e automação (⭐⭐ BASE SÓLIDA PARA DEVOPS/SRE)
+  - Cloud Computing: Para plataformas e desenvolvimento em nuvem (⭐ forte base para estudos, cursos e certificações)
+  - Infraestrutura: Para Linux, redes, containers e automação (⭐⭐ base sólida para estudos e certificações em DevOps/SRE)
 
 - [ ] **Escolha UMA opção** (não tente todos!)
   - Anote qual você escolheu: _______________

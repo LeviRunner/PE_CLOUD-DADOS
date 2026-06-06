@@ -1,6 +1,12 @@
 # Study Tracker - Checklist de Programação
 
-Uma aplicação web progressiva (PWA) para acompanhar seu progresso nos cursos de programação. Funciona 100% offline com salvamento automático de dados.
+Uma aplicação web progressiva (PWA) open source para apoiar estudos globais, cursos e certificações em programação e tecnologia. Funciona 100% offline com salvamento automático de dados.
+
+## Acesse a versão no Railway
+
+- Link da aplicação: https://study-tracker.up.railway.app/
+- Instalação como PWA: abra o link no navegador, use a opção "Instalar app" ou "Adicionar à tela inicial".
+- Uso offline: a PWA continua funcionando mesmo sem internet, com progresso salvo localmente.
 
 ## Características
 
