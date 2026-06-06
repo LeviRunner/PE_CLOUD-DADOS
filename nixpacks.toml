@@ -1,0 +1,11 @@
+# Configuração padrão do Nixpacks para deploy estático no Railway
+# Documentação: https://nixpacks.com/docs/configuration/file
+
+[phases.setup]
+nixPkgs = ["python3"]
+
+[phases.build]
+cmds = ["chmod +x start.sh"]
+
+[start]
+cmd = "bash start.sh"

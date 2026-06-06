@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checklist de estudo para programação - Acompanhe seu progresso nos cursos">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Study Tracker">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%231e88e5'>●</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231e88e5' width='180' height='180'/><text y='135' font-size='120' fill='white' text-anchor='middle' x='90'>●</text></svg>">
+
+    <title>Study Tracker - Checklist de Programação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1>Study Tracker</h1>
+                <p class="subtitle">Acompanhe seu progresso nos cursos de programação</p>
+            </div>
+            <button class="install-btn" id="installBtn" style="display: none;">Instalar App</button>
+        </header>
+
+        <!-- Progress Overview -->
+        <section class="progress-section">
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <span class="stat-label">Conclusão Geral</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="overallProgress"></div>
+                    </div>
+                    <span class="stat-value" id="overallPercent">0%</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Tarefas Completas</span>
+                    <span class="stat-value" id="tasksCompleted">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Tarefas Pendentes</span>
+                    <span class="stat-value" id="tasksPending">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Path Selection Tabs -->
+        <nav class="path-tabs">
+            <button class="tab-btn active" data-path="cloud">Cloud Computing</button>
+            <button class="tab-btn" data-path="data-science">Ciência de Dados</button>
+            <button class="tab-btn" data-path="full-stack">Full-Stack Cloud</button>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <!-- Cloud Computing Path -->
+            <section class="path-content active" data-path="cloud">
+                <div class="path-header">
+                    <h2>Cloud Computing</h2>
+                    <p>5-7 meses | Demanda: Máxima | Salário: R$ 12-18k+</p>
+                </div>
+
+                <div class="phases-container">
+                    <!-- Phase 1 -->
+                    <details class="phase-section" open>
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 1: Fundamentos (Semanas 1-8)</span>
+                            <span class="phase-progress" data-phase="cloud-1"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-logic" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Lógica de Programação</span>
+                                        <span class="course-instructor">Gustavo Guanabara | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfV7" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-go" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Go - Linguagem de Programação</span>
+                                        <span class="course-instructor">AprendaGo | 30h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/AprendaGo" target="_blank" class="link-btn youtube">YouTube</a>
+                                    <a href="https://www.aprendago.com" target="_blank" class="link-btn website">Site</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-git" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Git e GitHub</span>
+                                        <span class="course-instructor">Tiago Matos | 10h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbIBj8vQfySscKKjH5d3Cc2KLxWDZWmUM" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-linux" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Linux - Sistema Operacional</span>
+                                        <span class="course-instructor">Bom Som Treinamentos | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLf-O3X2-mxDn1VpyU2q3fuI3Ikuyig7ij" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-bash" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Bash - Automação de Tarefas</span>
+                                        <span class="course-instructor">Blau Araújo | 25h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbWvcwWtuDm0x1aSNYI4e3XC8DjDJDvXs" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-networks" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Redes de Computadores</span>
+                                        <span class="course-instructor">Gustavo Guanabara | 30h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkPvvixO52EMKvEHqkBn9ZT" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-db" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Banco de Dados</span>
+                                        <span class="course-instructor">Otávio Miranda | 25h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbIBj8vQfySs7ZRrqjpAXXc5g4ehJCWcZ" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-web" data-phase="cloud-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Desenvolvimento Web</span>
+                                        <span class="course-instructor">Daniel Tapias | 20h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/@dandev-oficial" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Phase 2 -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 2: Cloud & Containers (Semanas 9-18)</span>
+                            <span class="phase-progress" data-phase="cloud-2"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-aws" data-phase="cloud-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS - Cloud Computing</span>
+                                        <span class="course-instructor">Dev Dojo | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/@DevDojo" target="_blank" class="link-btn youtube">YouTube</a>
+                                    <a href="https://devdojo.com" target="_blank" class="link-btn website">Site</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-docker" data-phase="cloud-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Docker - Containers</span>
+                                        <span class="course-instructor">Tec Educa | 25h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-k8s" data-phase="cloud-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Kubernetes - Orquestração</span>
+                                        <span class="course-instructor">Lucas Santo | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BnexKYy5RLSQKT4vvvvyQ7SuY" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Phase 3 -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 3: Infrastructure as Code (Semanas 19-21)</span>
+                            <span class="phase-progress" data-phase="cloud-3"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-terraform" data-phase="cloud-3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Terraform - IaC</span>
+                                        <span class="course-instructor">Gasparotto | 30h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Certifications -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Certificações Profissionais</span>
+                            <span class="phase-progress" data-phase="cloud-cert"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-aws-dev" data-phase="cloud-cert">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS Certified Developer</span>
+                                        <span class="course-instructor">Amazon | Valor: USD 300</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://aws.amazon.com/certification/" target="_blank" class="link-btn website">Certificação AWS</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-aws-arch" data-phase="cloud-cert">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS Certified Solutions Architect</span>
+                                        <span class="course-instructor">Amazon | Valor: USD 300</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://aws.amazon.com/certification/" target="_blank" class="link-btn website">Certificação AWS</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="cloud-scrum" data-phase="cloud-cert">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Scrum Master Associate</span>
+                                        <span class="course-instructor">Scrum.org | Valor: USD 150</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.scrum.org" target="_blank" class="link-btn website">Scrum.org</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Data Science Path -->
+            <section class="path-content" data-path="data-science">
+                <div class="path-header">
+                    <h2>Ciência de Dados</h2>
+                    <p>6-8 meses | Demanda: Alta | Salário: R$ 10-15k+</p>
+                </div>
+
+                <div class="phases-container">
+                    <!-- Phase 1 -->
+                    <details class="phase-section" open>
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 1: Fundamentos (Semanas 1-6)</span>
+                            <span class="phase-progress" data-phase="ds-1"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-python" data-phase="ds-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Python Básico</span>
+                                        <span class="course-instructor">Gustavo Guanabara | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfV7" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-git" data-phase="ds-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Git e GitHub</span>
+                                        <span class="course-instructor">Tiago Matos | 10h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbIBj8vQfySscKKjH5d3Cc2KLxWDZWmUM" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-mysql" data-phase="ds-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">MySQL - Banco de Dados</span>
+                                        <span class="course-instructor">Otávio Miranda | 30h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbIBj8vQfySs7ZRrqjpAXXc5g4ehJCWcZ" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-analyst" data-phase="ds-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Analista de Dados</span>
+                                        <span class="course-instructor">Geração Analítica | 20h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/GeraçãoAnalitica" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Phase 2 -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 2: Especialização (Semanas 7-20)</span>
+                            <span class="phase-progress" data-phase="ds-2"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-ml" data-phase="ds-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Python para Machine Learning</span>
+                                        <span class="course-instructor">Didática TEC | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-powerbi" data-phase="ds-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Power BI - Dashboards</span>
+                                        <span class="course-instructor">Prime Cursos Brasil | 25h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BnezfJcqyaBr8WlLJuBaYDmA7" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-intro" data-phase="ds-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Introdução à Ciência de Dados</span>
+                                        <span class="course-instructor">Data Science Academy | 20h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/DataScienceAcademy" target="_blank" class="link-btn youtube">YouTube</a>
+                                    <a href="https://www.datascienceacademy.com.br" target="_blank" class="link-btn website">Site</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-stats" data-phase="ds-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Estatística e Data Science</span>
+                                        <span class="course-instructor">Estática de Dados | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/EstaticaDados" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-ml-advanced" data-phase="ds-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Machine Learning</span>
+                                        <span class="course-instructor">Alatech (Sticklear) | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/Alatech" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Phase 3 -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Fase 3: Consolidação (Semanas 21-24)</span>
+                            <span class="phase-progress" data-phase="ds-3"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-ai" data-phase="ds-3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Inteligência Artificial</span>
+                                        <span class="course-instructor">Gustavo Guanabara | 20h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dnSj0MHol_aoNYCSGFqvfV7" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Certifications -->
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Certificações Profissionais</span>
+                            <span class="phase-progress" data-phase="ds-cert"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-gcp" data-phase="ds-cert">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Google Cloud Professional</span>
+                                        <span class="course-instructor">Google | Valor: USD 200</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://cloud.google.com/certification" target="_blank" class="link-btn website">Google Cloud</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="ds-aws-analytics" data-phase="ds-cert">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS Certified Data Analytics</span>
+                                        <span class="course-instructor">Amazon | Valor: USD 300</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://aws.amazon.com/certification/" target="_blank" class="link-btn website">Certificação AWS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Full-Stack Cloud Path -->
+            <section class="path-content" data-path="full-stack">
+                <div class="path-header">
+                    <h2>Full-Stack Cloud</h2>
+                    <p>9-12 meses | Demanda: Máxima | Salário: R$ 15-25k+</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Estrutura Combinada</h3>
+                    <p>Este caminho combina Ciência de Dados e Cloud Computing para criar um profissional ultra-versátil. Siga os cursos em paralelo conforme o cronograma sugerido.</p>
+                </div>
+
+                <div class="phases-container">
+                    <details class="phase-section" open>
+                        <summary class="phase-title">
+                            <span class="phase-name">Meses 1-3: Fundamentos Integrados</span>
+                            <span class="phase-progress" data-phase="fs-1"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-logic" data-phase="fs-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Lógica de Programação</span>
+                                        <span class="course-instructor">Gustavo Guanabara | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfV7" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-python" data-phase="fs-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Python + Go Básico</span>
+                                        <span class="course-instructor">Múltiplos instrutores | 70h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfV7" target="_blank" class="link-btn youtube">Python</a>
+                                    <a href="https://www.youtube.com/c/AprendaGo" target="_blank" class="link-btn youtube">Go</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-git" data-phase="fs-1">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Git, GitHub e Linux</span>
+                                        <span class="course-instructor">Múltiplos instrutores | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLbIBj8vQfySscKKjH5d3Cc2KLxWDZWmUM" target="_blank" class="link-btn youtube">Git</a>
+                                    <a href="https://www.youtube.com/playlist?list=PLf-O3X2-mxDn1VpyU2q3fuI3Ikuyig7ij" target="_blank" class="link-btn youtube">Linux</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Meses 4-6: Backend + Cloud</span>
+                            <span class="phase-progress" data-phase="fs-2"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-python-ml" data-phase="fs-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Python para Machine Learning</span>
+                                        <span class="course-instructor">Didática TEC | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-aws" data-phase="fs-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS e Nuvem</span>
+                                        <span class="course-instructor">Dev Dojo | 50h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/@DevDojo" target="_blank" class="link-btn youtube">YouTube</a>
+                                    <a href="https://devdojo.com" target="_blank" class="link-btn website">Site</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-stats" data-phase="fs-2">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Estatística Aplicada</span>
+                                        <span class="course-instructor">Estática de Dados | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/c/EstaticaDados" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Meses 7-9: DevOps & Containers</span>
+                            <span class="phase-progress" data-phase="fs-3"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-docker" data-phase="fs-3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Docker</span>
+                                        <span class="course-instructor">Tec Educa | 25h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-k8s" data-phase="fs-3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Kubernetes</span>
+                                        <span class="course-instructor">Lucas Santo | 40h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BnexKYy5RLSQKT4vvvvyQ7SuY" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-terraform" data-phase="fs-3">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Terraform - IaC</span>
+                                        <span class="course-instructor">Gasparotto | 30h</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.youtube.com/playlist?list=PLnDvRpP8BneyVTT2ffgSHmkSJuw-gMaAr" target="_blank" class="link-btn youtube">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="phase-section">
+                        <summary class="phase-title">
+                            <span class="phase-name">Meses 10-12: Consolidação & Certificações</span>
+                            <span class="phase-progress" data-phase="fs-4"></span>
+                        </summary>
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-aws-dev" data-phase="fs-4">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS Certified Developer</span>
+                                        <span class="course-instructor">Amazon | Valor: USD 300</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://aws.amazon.com/certification/" target="_blank" class="link-btn website">Certificação AWS</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-aws-arch" data-phase="fs-4">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">AWS Certified Solutions Architect</span>
+                                        <span class="course-instructor">Amazon | Valor: USD 300</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://aws.amazon.com/certification/" target="_blank" class="link-btn website">Certificação AWS</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-gcp" data-phase="fs-4">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Google Cloud Professional</span>
+                                        <span class="course-instructor">Google | Valor: USD 200</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://cloud.google.com/certification" target="_blank" class="link-btn website">Google Cloud</a>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="task-checkbox" data-id="fs-scrum" data-phase="fs-4">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="course-info">
+                                        <span class="course-name">Scrum Master Associate</span>
+                                        <span class="course-instructor">Scrum.org | Valor: USD 150</span>
+                                    </span>
+                                </label>
+                                <div class="course-links">
+                                    <a href="https://www.scrum.org" target="_blank" class="link-btn website">Scrum.org</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <button class="action-btn" id="exportBtn">Exportar Progresso</button>
+            <button class="action-btn danger" id="resetBtn">Limpar Dados</button>
+            <p class="footer-text">Seus dados são salvos automaticamente no navegador. Funciona offline.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: study-tracker
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - study-network
+
+networks:
+  study-network:
+    driver: bridge
+
+# Como usar:
+# 1. Instale Docker e Docker Compose
+# 2. Na pasta study-tracker, execute: docker-compose up -d
+# 3. Acesse: http://localhost
+# 4. Para parar: docker-compose down
