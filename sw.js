@@ -1,5 +1,5 @@
-const CACHE_NAME = 'study-tracker-v8';
-const RUNTIME_CACHE = 'study-tracker-runtime-v8';
+const CACHE_NAME = 'study-tracker-v9';
+const RUNTIME_CACHE = 'study-tracker-runtime-v9';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
