@@ -236,7 +236,7 @@ ENTENDER A ESTRUTURA
 
 index.html:
 - Contém toda a estrutura da página
-- 3 abas: Cloud, Dados, Full-Stack
+- 3 abas: Cloud, Dados, Infraestrutura
 - 40+ cursos com links
 - Totalmente semântico e acessível
 
@@ -301,7 +301,7 @@ DICAS PRO
 PRÓXIMOS PASSOS
 ================================================================================
 
-1. Escolha seu caminho de estudo (Cloud, Dados, Full-Stack)
+1. Escolha seu caminho de estudo (Cloud, Dados, Infraestrutura)
 2. Comece a marcar os cursos que já fez
 3. Veja seu progresso crescer
 4. Exporte regularmente para backup

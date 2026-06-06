@@ -3,7 +3,7 @@
 ## O que foi criado para você:
 
 ### 1. Aplicação Web Funcional
-- **index.html** (49KB) - Página principal com 3 caminhos de estudo
+- **index.html** (49KB) - Página principal com 3 trilhas de estudo
 - **style.css** (12KB) - Estilos responsivos e tema escuro/claro
 - **app.js** (12KB) - Lógica de checklist com localStorage
 - **sw.js** (6.4KB) - Service Worker para modo offline
@@ -20,7 +20,7 @@
 ### 3. Funcionalidades Principais
 
 #### Checklist Interativo
-- [x] 3 caminhos de estudo (Cloud, Dados, Full-Stack)
+- [x] 3 trilhas de estudo (Cloud, Dados, Infraestrutura)
 - [x] 40+ cursos organizados por fase
 - [x] Links diretos para YouTube e sites oficiais
 - [x] Marcar como concluído com um clique
@@ -77,8 +77,14 @@
 10. Inteligência Artificial (Gustavo Guanabara) - YouTube
 11. Certificações: Google Cloud, AWS Analytics
 
-#### Caminho Full-Stack Cloud (9-12 meses)
-Combina os dois caminhos acima para máximo crescimento profissional
+#### Trilha Infraestrutura (4-6 meses)
+1. Redes de Computadores (Gustavo Guanabara) - YouTube
+2. Linux - Sistema Operacional (Bom Som Treinamentos) - YouTube
+3. Bash - Automação de Tarefas (Blau Araújo) - YouTube
+4. Docker (Tec Educa) - YouTube
+5. Kubernetes (Lucas Santo) - YouTube
+6. Terraform - IaC (Gasparotto) - YouTube
+7. Certificações: LPIC-1, CompTIA Linux+, Terraform Associate, CKA
 
 ### 5. Tecnologias Usadas
 

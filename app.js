@@ -36,9 +36,9 @@ window.addEventListener('appinstalled', () => {
 // Configuration
 const STORAGE_KEY = 'study-tracker-progress';
 const PHASE_DATA = {
-    'cloud': ['cloud-1', 'cloud-2', 'cloud-3', 'cloud-cert'],
-    'data-science': ['ds-1', 'ds-2', 'ds-3', 'ds-cert'],
-    'full-stack': ['fs-1', 'fs-2', 'fs-3', 'fs-4']
+    'cloud': ['cloud-knowledge', 'cloud-courses', 'cloud-tools', 'cloud-cert'],
+    'data-science': ['ds-knowledge', 'ds-courses', 'ds-tools', 'ds-cert'],
+    'infra': ['infra-knowledge', 'infra-courses', 'infra-tools', 'infra-cert']
 };
 
 // Initialize App
@@ -80,13 +80,13 @@ function switchPath(path) {
     });
 
     // Show selected content
-    document.querySelector(`[data-path="${path}"]`).classList.add('active');
+    document.querySelector(`.path-content[data-path="${path}"]`).classList.add('active');
 
     // Update active tab
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    event.target.classList.add('active');
+    document.querySelector(`.tab-btn[data-path="${path}"]`).classList.add('active');
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });

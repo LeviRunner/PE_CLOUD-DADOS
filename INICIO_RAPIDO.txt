@@ -24,7 +24,7 @@ COMO USAR
 =========
 
 1. ESCOLHA SEU CAMINHO
-   - Clique nas abas: Cloud Computing, Ciência de Dados ou Full-Stack Cloud
+   - Clique nas abas: Cloud Computing, Ciência de Dados ou Infraestrutura
    - Escolha qual caminho quer seguir
 
 2. MARQUE SEUS CURSOS

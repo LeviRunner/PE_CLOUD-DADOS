@@ -7,9 +7,9 @@ Uma aplicação web progressiva (PWA) para acompanhar seu progresso nos cursos d
 - **Offline First**: Funciona completamente offline com Service Worker
 - **Sincronização Automática**: Salva progresso automaticamente em cache
 - **3 Caminhos de Aprendizado**:
-  - Cloud Computing (5-7 meses)
+  - Cloud Computing (4-6 meses)
   - Ciência de Dados (6-8 meses)
-  - Full-Stack Cloud (9-12 meses)
+  - Infraestrutura (4-6 meses)
 - **Links Diretos**: Acesso rápido ao YouTube e sites dos cursos
 - **Progresso Visual**: Acompanhe seu progresso em tempo real
 - **Exportar Dados**: Exporte seu progresso em JSON

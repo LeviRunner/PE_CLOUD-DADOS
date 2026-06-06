@@ -6,10 +6,10 @@
 ## 🔥 ANTES DE COMEÇAR (Hoje - 30 minutos)
 
 ### Escolha seu caminho
-- [ ] **Leia a comparação dos 3 caminhos**
+- [ ] **Leia a comparação das 3 trilhas**
   - Ciência de Dados: Para análise, BI, insights
-  - Cloud Computing: Para DevOps, infraestrutura (⭐ MAIOR SALÁRIO + DEMANDA)
-  - Full-Stack Cloud: Combinação dos dois (⭐⭐ RECOMENDADO)
+  - Cloud Computing: Para plataformas e desenvolvimento em nuvem (⭐ MAIOR SALÁRIO + DEMANDA)
+  - Infraestrutura: Para Linux, redes, containers e automação (⭐⭐ BASE SÓLIDA PARA DEVOPS/SRE)
 
 - [ ] **Escolha UMA opção** (não tente todos!)
   - Anote qual você escolheu: _______________
@@ -141,7 +141,7 @@
 
 ---
 
-## 🗄️ SEMANA 6: BANCO DE DADOS (Se escolheu Ciência de Dados ou Full-Stack)
+## 🗄️ SEMANA 6: BANCO DE DADOS (Se escolheu Ciência de Dados ou Cloud Computing)
 
 **Curso:** MySQL - Otávio Miranda OU SQLite (mais simples para começar)
 

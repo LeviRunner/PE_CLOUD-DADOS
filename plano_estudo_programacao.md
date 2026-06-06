@@ -344,16 +344,16 @@ Semana 19-21: Terraform (30h)
 
 # 📋 COMPARAÇÃO DOS 3 CAMINHOS
 
-| Critério | Ciência de Dados | Cloud Computing | Full-Stack Cloud |
+| Critério | Ciência de Dados | Cloud Computing | Infraestrutura |
 |----------|------------------|-----------------|------------------|
-| **Duração** | 6-8 meses | 5-7 meses | 9-12 meses |
-| **Dificuldade** | Média | Média-Alta | Alta |
+| **Duração** | 6-8 meses | 4-6 meses | 4-6 meses |
+| **Dificuldade** | Média | Média-Alta | Média-Alta |
 | **Carga horária/semana** | 15-25h | 15-30h | 15-30h |
-| **Salário inicial** | R$ 5-8k | R$ 6-10k | R$ 8-15k |
-| **Salário +2 anos** | R$ 10-15k | R$ 12-18k | R$ 15-25k+ |
-| **Demanda** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Certificações** | Google, AWS | AWS, GCP, Scrum | AWS, GCP, Scrum, +CISSP |
-| **Melhor para** | Análise dados | DevOps/Infra | Liderança técnica |
+| **Salário inicial** | R$ 5-8k | R$ 6-10k | R$ 5-9k |
+| **Salário +2 anos** | R$ 10-15k | R$ 12-18k | R$ 10-16k+ |
+| **Demanda** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Certificações** | Google, AWS | AWS, GCP, Scrum | LPIC, CompTIA, Terraform, CKA |
+| **Melhor para** | Análise dados | Plataformas/Dev Cloud | Operações/SRE/DevOps |
 
 ---
 
@@ -364,7 +364,7 @@ Semana 19-21: Terraform (30h)
 ## **COMECE AGORA:**
 
 ### Semana 1:
-- [ ] Escolha seu caminho (Ciência de Dados / Cloud / Full-Stack)
+- [ ] Escolha seu caminho (Ciência de Dados / Cloud / Infraestrutura)
 - [ ] Inscreva-se nos cursos de **Lógica de Programação** (Gustavo Guanabara)
 - [ ] Abra uma conta no GitHub
 - [ ] Crie um cronograma fixo (ex: 2h por dia, 5 dias por semana)
