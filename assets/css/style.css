@@ -50,14 +50,146 @@ main { max-width: 1280px; margin: 0 auto; padding: 24px 18px 64px; }
 .course-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; align-items: stretch; }
 .course-card { padding: 16px; display:flex; flex-direction:column; justify-content:space-between; min-height: 100%; }
 .course-card .meta { color: var(--muted); font-size: 13px; margin: 6px 0; }
-.course-card .tag { display:inline-block; padding: 6px 8px; border-radius: 999px; background: rgba(167,139,250,0.12); color: #ddd6fe; font-size: 12px; }
+.course-card .tag { display:inline-block; padding: 6px 8px; border-radius: 999px; background: rgba(0, 183, 255, 0.12); color: #ffffff; font-size: 12px; }
 .task-card { gap: 10px; background: linear-gradient(180deg, rgba(16,27,44,0.96), rgba(12,23,38,0.96)); border:1px solid rgba(148,163,184,0.14); border-radius: 24px; box-shadow: 0 18px 35px rgba(8,15,24,0.35); }
 .task-card .task-label { display:flex; align-items:flex-start; gap:10px; }
 .task-card .task-label input { margin-top: 2px; }
 .task-card .task-meta { display:grid; gap: 4px; }
-.task-item input { width: 18px; height: 18px; accent-color: var(--accent); }
+.task-card .task-label input.task-checkbox {
+  width: 22px;              /* Aumenta a largura (ajuste como preferir, ex: 24px) */
+  height: 22px;             /* Aumenta a altura */
+  accent-color: #0059ff;    /* Cor do check (coloque sua variável ou cor preferida) */
+  cursor: pointer;          /* Mantém o ponteiro de clique ao passar o mouse */
+  flex-shrink: 0;           /* Garante que o checkbox não esmague se o texto for grande */
+}
 .task-item .task-link { display:flex; align-items:center; justify-content:space-between; width:100%; gap:8px; margin-top: 4px; }
 .task-pill { font-size:12px; color: var(--muted); }
+.task-label {
+  display: flex;
+  align-items: center;       /* Alinha verticalmente o texto e o checkbox */
+  justify-content: space-between; /* Empurra o texto para a esquerda e o checkbox para a direita */
+  width: 100%;               /* Garante que o label ocupe todo o espaço disponível do card */
+  cursor: pointer;
+}
+
+/* Torna o container do card a base para o posicionamento */
+.course-card.task-card {
+  position: relative;
+  padding: 0; /* Remove o padding interno do container para o link ocupar 100% */
+}
+
+/* O link interno do card gerencia o espaço e o layout interno */
+.card-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  min-height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+/* Alinha o texto guardando espaço na direita para o checkbox */
+.task-meta {
+  padding-right: 30px; 
+}
+
+/* Isola o botão de checklist de forma absoluta no topo direito do card */
+.checkbox-container {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2; /* Garante que fique clicável por cima do link */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--accent, #a78bfa);
+  margin: 0;
+  cursor: pointer;
+}
+
+.task-meta {
+  display: flex;
+  flex-direction: column;    /* Mantém o título em cima e a "pill" embaixo */
+}
+
+/* O container/fundo da barra */
+.progress-row {
+  width: 100%;
+  height: 8px;                  /* Altura da barra */
+  background: rgba(255, 255, 255, 0.08); /* Fundo escuro e discreto */
+  border-radius: 999px;         /* Deixa as bordas arredondadas */
+  overflow: hidden;             /* Garante que o preenchimento não passe das bordas */
+  margin-top: 10px;
+  position: relative;
+}
+
+/* O preenchimento dinâmico da barra */
+#courseProgressBar {
+  display: block;               /* Necessário para o span aceitar width e height */
+  height: 100%;
+  background: linear-gradient(75deg, #00a2ff, #001aff); /* Gradiente roxo/azul combinando com seus cards */
+  border-radius: 999px;
+  transition: width 0.5s ease;  /* Animação suave quando o progresso mudar */
+  width: 0%;                    /* Começa em 0% */
+}
+
+/* Opcional: espaçamento para o texto do progresso */
+.progress-text {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+/* Container do card mantendo o layout flexível */
+.course-card.task-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Garante que o texto não fique colado no checkbox da direita */
+.task-content {
+  padding-right: 35px;
+}
+
+/* Nova estilização do botão de abrir como azul-claro */
+.tag.btn-abrir {
+  display: inline-block;
+  align-self: flex-start;      /* Faz o botão se ajustar ao tamanho do texto */
+  margin-top: 12px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  
+  /* Estado Inicial: Azul Claro */
+  background-color: rgba(56, 189, 248, 0.15); /* Azul celeste suave com transparência */
+  color: #38bdf8;                             /* Texto azul celeste */
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  
+  /* Transição suave para o efeito de hover */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estado Hover: Transiciona para o Azul Escuro */
+.tag.btn-abrir:hover {
+  background-color: #1d4ed8;                  /* Fundo azul escuro sólido (Tailwind blue-700) */
+  color: #ffffff;                             /* Texto muda para branco para melhor contraste */
+  border-color: #1e40af;                      /* Borda azul um pouco mais escura */
+}
 
 .profile-box { display:grid; gap: 12px; }
 .select, .chip { width: 100%; border-radius: 12px; border: 1px solid rgba(148,163,184,0.18); background: var(--panel-2); color: var(--text); padding: 10px 12px; }

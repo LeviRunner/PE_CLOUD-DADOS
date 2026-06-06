@@ -24,6 +24,7 @@
       <a href="../../index.html">Início</a>
     </aside>
     <main>
+
       <section class="hero-card">
         <div>
           <div class="badge">Curso exclusivo</div>
@@ -35,27 +36,104 @@
           <p class="muted">Fundamentos, serviços, automação e certificações em cloud.</p>
         </div>
       </section>
-      <section class="grid-2 study-shell">
-        <article class="panel">
-          <h2>Checklist e recursos — Cloud</h2>
-          <div class="progress-row"><strong id="courseProgressLabel">0/4 concluídos</strong><span class="muted">Progresso da trilha</span></div>
-          <div class="progress-bar"><span id="courseProgressBar" style="width:0%"></span></div>
-          <div class="task-list">
-            <article class="task-item"><input class="task-checkbox" data-id="cloud-fundamentos" type="checkbox"><div><strong>Fundamentos de AWS</strong><div class="task-pill">Dev Dojo · YouTube</div></div><a class="tag" href="https://explore.skillbuilder.aws/learn" target="_blank">Certificação</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="cloud-git" type="checkbox"><div><strong>Git e GitHub para projetos</strong><div class="task-pill">Tiago Matos · YouTube</div></div><a class="tag" href="https://www.youtube.com/playlist?list=PLbIBj8vQfySscKKjH5d3Cc2KLxWDZWmUM" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="cloud-go" type="checkbox"><div><strong>Go para automação e serviços</strong><div class="task-pill">AprendaGo · YouTube + Site</div></div><a class="tag" href="https://www.youtube.com/c/AprendaGo" target="_blank">YouTube</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="cloud-cert" type="checkbox"><div><strong>Certificação AWS Cloud Practitioner</strong><div class="task-pill">AWS · Oficial</div></div><a class="tag" href="https://aws.amazon.com/certification/" target="_blank">Certificação</a></article>
-          </div>
-          <div class="study-grid">
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-aws" type="checkbox"><span class="task-meta"><strong>AWS Skill Builder</strong><span class="meta">Laboratórios, trilhas e certificações oficiais da AWS.</span></span></label><a class="tag" href="https://explore.skillbuilder.aws/learn" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-azure" type="checkbox"><span class="task-meta"><strong>Azure Learn</strong><span class="meta">Fundamentos, identidade e serviços em nuvem da Microsoft.</span></span></label><a class="tag" href="https://learn.microsoft.com/azure/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-gcp" type="checkbox"><span class="task-meta"><strong>Google Cloud Skills Boost</strong><span class="meta">Caminhos práticos para GCP, dados e infraestrutura.</span></span></label><a class="tag" href="https://www.cloudskillsboost.google/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-terraform" type="checkbox"><span class="task-meta"><strong>Terraform Learn</strong><span class="meta">Infraestrutura como código com exemplos reais.</span></span></label><a class="tag" href="https://developer.hashicorp.com/terraform/learn" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-docker" type="checkbox"><span class="task-meta"><strong>Docker Docs</strong><span class="meta">Containers, imagens e deploys em ambientes reproducíveis.</span></span></label><a class="tag" href="https://docs.docker.com/get-started/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="cloud-card-linuxfoundation" type="checkbox"><span class="task-meta"><strong>Linux Foundation</strong><span class="meta">Cursos e certificações para Linux, cloud e open source.</span></span></label><a class="tag" href="https://training.linuxfoundation.org/" target="_blank">Abrir recurso</a></article>
-          </div>
-        </article>
+
+      <section class="panel">
+        <h2>Checklist e recursos</h2>
+        <h3 class="progress-text">
+        <strong id="courseProgressLabel">0/4 concluídos</strong>
+        </h3>
+        <div class="progress-row">
+        <span id="courseProgressBar" style="width: 0%"></span>
+        </div>
       </section>
+
+        <br>
+
+<section class="course-grid">
+
+<div class="course-card task-card">
+  <div class="task-content">
+    
+    <div class="task-meta">
+      <strong>AWS Skill Builder</strong>
+      <p class="task-pill">Laboratórios, trilhas e certificações oficiais da AWS.</p>
+    </div>
+    
+    <a class="tag btn-abrir" href="https://explore.skillbuilder.aws/learn" target="_blank">Abrir recurso</a>
+  </div>
+
+  <label class="checkbox-container">
+    <input class="task-checkbox" data-id="cloud-card-aws" type="checkbox">
+  </label>
+</div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Azure Learn</strong>
+        <p class="task-pill">Fundamentos, identidade e serviços em nuvem da Microsoft.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://learn.microsoft.com/azure/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="cloud-card-azure" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Google Cloud Skills Boost</strong>
+        <p class="task-pill">Caminhos práticos para GCP, dados e infraestrutura.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.cloudskillsboost.google/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="cloud-card-gcp" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Terraform Learn</strong>
+        <p class="task-pill">Infraestrutura como código com exemplos reais.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://developer.hashicorp.com/terraform/learn" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="cloud-card-terraform" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Docker Docs</strong>
+        <p class="task-pill">Containers, imagens e deploys em ambientes reproducíveis.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://docs.docker.com/get-started/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="cloud-card-docker" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Linux Foundation</strong>
+        <p class="task-pill">Cursos e certificações para Linux, cloud e open source.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://training.linuxfoundation.org/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="cloud-card-linuxfoundation" type="checkbox">
+    </label>
+  </div>
+</section>
+
+</div>
     </main>
   </div>
   <script src="../../assets/js/app.js"></script>

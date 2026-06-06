@@ -24,6 +24,7 @@
       <a href="../../index.html">Início</a>
     </aside>
     <main>
+
       <section class="hero-card">
         <div>
           <div class="badge">Curso exclusivo</div>
@@ -36,28 +37,155 @@
         </div>
       </section>
 
-      <section> 
-        <div class="hero-card">Checklist e recursos
-        <div class="progress-row"><strong id="courseProgressLabel">0/4 concluídos</strong><span class="muted">Progresso da trilha</span></div>
-        <div class="progress-bar"><span id="courseProgressBar" style="width:0%"></span> 
+      <section class="panel">
+        <h2>Checklist e recursos</h2>
+        <h3 class="progress-text">
+        <strong id="courseProgressLabel">0/4 concluídos</strong>
+        </h3>
+        <div class="progress-row">
+        <span id="courseProgressBar" style="width: 0%"></span>
         </div>
-        </section>
-
-          <div class="lead">
-            <article class="task-item"><input class="task-checkbox" data-id="data-estatistica" type="checkbox"><div><strong>Estatística e Data Science</strong><div class="task-pill">Estática de Dados · YouTube</div></div><a class="tag" href="https://www.youtube.com/results?search_query=Estat%C3%ADstica+de+Dados" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="data-python" type="checkbox"><div><strong>Python para dados</strong><div class="task-pill">Gustavo Guanabara · YouTube</div></div><a class="tag" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dnSj0MHol_aoNYCSGFqvfV7" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="data-sql" type="checkbox"><div><strong>SQL e modelagem</strong><div class="task-pill">Otávio Miranda · YouTube</div></div><a class="tag" href="https://www.youtube.com/playlist?list=PLbIBj8vQfySs7ZRrqjpAXXc5g4ehJCWcZ" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="data-cert" type="checkbox"><div><strong>Certificação Google Data Analytics</strong><div class="task-pill">Google · Oficial</div></div><a class="tag" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Certificação</a></article>
-          <div class="panel">
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-kaggle" type="checkbox"><span class="task-meta"><strong>Kaggle Learn</strong><span class="meta">Mini-cursos gratuitos em Python, SQL, machine learning e visualização.</span></span></label><a class="tag" href="https://www.kaggle.com/learn" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-mslearn" type="checkbox"><span class="task-meta"><strong>Microsoft Learn</strong><span class="meta">Caminho introdutório para ciência de dados e analytics.</span></span></label><a class="tag" href="https://learn.microsoft.com/training/paths/get-started-with-data-science/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-google" type="checkbox"><span class="task-meta"><strong>Google Data Analytics</strong><span class="meta">Fundamentos de dados, planilhas, SQL e visualização.</span></span></label><a class="tag" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-sqlbolt" type="checkbox"><span class="task-meta"><strong>SQLBolt</strong><span class="meta">Exercícios práticos para consultas, joins e normalização.</span></span></label><a class="tag" href="https://sqlbolt.com/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-tableau" type="checkbox"><span class="task-meta"><strong>Tableau Training</strong><span class="meta">Dashboards, storytelling e visualização de dados.</span></span></label><a class="tag" href="https://www.tableau.com/learn/training" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="data-card-mongodb" type="checkbox"><span class="task-meta"><strong>MongoDB University</strong><span class="meta">Banco de dados NoSQL e fundamentos para projetos reais.</span></span></label><a class="tag" href="https://learn.mongodb.com/" target="_blank">Abrir recurso</a></article>
-          </div>
-        </article>
       </section>
+
+        <br>
+
+<section class="course-grid">
+
+<div class="course-card task-card">
+  <div class="task-content">
+    
+    <div class="task-meta">
+      <strong>Estatística e Data Science</strong>
+      <p class="task-pill">Estática de Dados · YouTube</p>
+    </div>
+    
+    <a class="tag btn-abrir" href="https://www.youtube.com/results?search_query=Estat%C3%ADstica+de+Dados" target="_blank">Abrir</a>
+  </div>
+
+  <label class="checkbox-container">
+    <input class="task-checkbox" data-id="data-card-estatistica" type="checkbox">
+  </label>
+</div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Python para dados</strong>
+        <p class="task-pill">Gustavo Guanabara · YouTube</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dnSj0MHol_aoNYCSGFqvfV7" target="_blank">Abrir</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-python" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>SQL e modelagem</strong>
+        <p class="task-pill">Otávio Miranda · YouTube</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.youtube.com/playlist?list=PLbIBj8vQfySs7ZRrqjpAXXc5g4ehJCWcZ" target="_blank">Abrir</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-sql" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Certificação Google Data Analytics</strong>
+        <p class="task-pill">Google · Oficial</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Abrir</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-cert-google" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Kaggle Learn</strong>
+        <p class="task-pill">Mini-cursos gratuitos em Python, SQL, machine learning e visualização.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.kaggle.com/learn" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-kaggle" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Microsoft Learn</strong>
+        <p class="task-pill">Caminho introdutório para ciência de dados e analytics.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://learn.microsoft.com/training/paths/get-started-with-data-science/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-mslearn" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Google Data Analytics</strong>
+        <p class="task-pill">Fundamentos de dados, planilhas, SQL e visualização.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-google" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>SQLBolt</strong>
+        <p class="task-pill">Exercícios práticos para consultas, joins e normalização.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://sqlbolt.com/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-sqlbolt" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Tableau Training</strong>
+        <p class="task-pill">Dashboards, storytelling e visualização de dados.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.tableau.com/learn/training" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-tableau" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>MongoDB University</strong>
+        <p class="task-pill">Banco de dados NoSQL e fundamentos para projetos reais.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://learn.mongodb.com/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="data-card-mongodb" type="checkbox">
+    </label>
+  </div>
+</section>
+
+</div>
     </main>
   </div>
   <script src="../../assets/js/app.js"></script>

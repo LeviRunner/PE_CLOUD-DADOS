@@ -24,6 +24,7 @@
       <a href="../../index.html">Início</a>
     </aside>
     <main>
+
       <section class="hero-card">
         <div>
           <div class="badge">Curso exclusivo</div>
@@ -35,27 +36,104 @@
           <p class="muted">Sistemas operacionais, rede, containers e práticas de automação.</p>
         </div>
       </section>
-      <section class="grid-2 study-shell">
-        <article class="panel">
-          <h2>Checklist e recursos — Infraestrutura</h2>
-          <div class="progress-row"><strong id="courseProgressLabel">0/4 concluídos</strong><span class="muted">Progresso da trilha</span></div>
-          <div class="progress-bar"><span id="courseProgressBar" style="width:0%"></span></div>
-          <div class="task-list">
-            <article class="task-item"><input class="task-checkbox" data-id="infra-linux" type="checkbox"><div><strong>Linux e shell</strong><div class="task-pill">Bom Som · YouTube</div></div><a class="tag" href="https://www.youtube.com/results?search_query=Bom+Som+Linux" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="infra-docker" type="checkbox"><div><strong>Docker e containers</strong><div class="task-pill">Tec Educa · YouTube</div></div><a class="tag" href="https://www.youtube.com/results?search_query=Tec+Educa+Docker" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="infra-devops" type="checkbox"><div><strong>Automação e DevOps</strong><div class="task-pill">Lucas Santo · YouTube</div></div><a class="tag" href="https://www.youtube.com/results?search_query=Lucas+Santo+Kubernetes" target="_blank">Abrir</a></article>
-            <article class="task-item"><input class="task-checkbox" data-id="infra-cert" type="checkbox"><div><strong>Certificação Linux Foundation / DevOps</strong><div class="task-pill">Linux Foundation · Oficial</div></div><a class="tag" href="https://training.linuxfoundation.org/" target="_blank">Certificação</a></article>
-          </div>
-          <div class="study-grid">
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-linuxjourney" type="checkbox"><span class="task-meta"><strong>Linux Journey</strong><span class="meta">Linha de estudo para shell, usuários, redes e administração.</span></span></label><a class="tag" href="https://linuxjourney.com/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-cisco" type="checkbox"><span class="task-meta"><strong>Cisco Networking</strong><span class="meta">Redes, segurança e fundamentos de infraestrutura.</span></span></label><a class="tag" href="https://www.netacad.com/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-docker" type="checkbox"><span class="task-meta"><strong>Docker Docs</strong><span class="meta">Containers, imagens e orquestração para ambientes reais.</span></span></label><a class="tag" href="https://docs.docker.com/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-k8s" type="checkbox"><span class="task-meta"><strong>Kubernetes Docs</strong><span class="meta">Clusters, deploys, serviços e observabilidade.</span></span></label><a class="tag" href="https://kubernetes.io/docs/home/" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-terraform" type="checkbox"><span class="task-meta"><strong>Terraform Learn</strong><span class="meta">Infraestrutura como código, módulos e automação.</span></span></label><a class="tag" href="https://developer.hashicorp.com/terraform/learn" target="_blank">Abrir recurso</a></article>
-            <article class="course-card task-card"><label class="task-label"><input class="task-checkbox" data-id="infra-card-actions" type="checkbox"><span class="task-meta"><strong>GitHub Actions</strong><span class="meta">CI/CD, automação e pipelines para ambientes modernos.</span></span></label><a class="tag" href="https://docs.github.com/actions" target="_blank">Abrir recurso</a></article>
-          </div>
-        </article>
+
+      <section class="panel">
+        <h2>Checklist e recursos</h2>
+        <h3 class="progress-text">
+        <strong id="courseProgressLabel">0/4 concluídos</strong>
+        </h3>
+        <div class="progress-row">
+        <span id="courseProgressBar" style="width: 0%"></span>
+        </div>
       </section>
+
+        <br>
+
+<section class="course-grid">
+
+<div class="course-card task-card">
+  <div class="task-content">
+    
+    <div class="task-meta">
+      <strong>Linux Journey</strong>
+      <p class="task-pill">Linha de estudo para shell, usuários, redes e administração.</p>
+    </div>
+    
+    <a class="tag btn-abrir" href="https://linuxjourney.com/" target="_blank">Abrir recurso</a>
+  </div>
+
+  <label class="checkbox-container">
+    <input class="task-checkbox" data-id="infra-card-linuxjourney" type="checkbox">
+  </label>
+</div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Cisco Networking</strong>
+        <p class="task-pill">Redes, segurança e fundamentos de infraestrutura.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://www.netacad.com/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="infra-card-cisco" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Docker Docs</strong>
+        <p class="task-pill">Containers, imagens e orquestração para ambientes reais.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://docs.docker.com/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="infra-card-docker" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Kubernetes Docs</strong>
+        <p class="task-pill">Clusters, deploys, serviços e observabilidade.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://kubernetes.io/docs/home/" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="infra-card-k8s" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>Terraform Learn</strong>
+        <p class="task-pill">Infraestrutura como código, módulos e automação.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://developer.hashicorp.com/terraform/learn" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="infra-card-terraform" type="checkbox">
+    </label>
+  </div>
+
+  <div class="course-card task-card">
+    <div class="task-content">
+      <div class="task-meta">
+        <strong>GitHub Actions</strong>
+        <p class="task-pill">CI/CD, automação e pipelines para ambientes modernos.</p>
+      </div>
+      <a class="tag btn-abrir" href="https://docs.github.com/actions" target="_blank">Abrir recurso</a>
+    </div>
+    <label class="checkbox-container">
+      <input class="task-checkbox" data-id="infra-card-actions" type="checkbox">
+    </label>
+  </div>
+</section>
+
+</div>
     </main>
   </div>
   <script src="../../assets/js/app.js"></script>
